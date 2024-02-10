@@ -1,0 +1,82 @@
+{"intents":[
+    {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hey", "Hello", "How are you?", "Good day", "Is anyone there?"],
+        "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help you?"],
+        "context_set": ""
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["Bye", "Goodbye", "See you later"],
+        "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+    },
+    {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful"],
+        "responses": ["Happy to help", "You're welcome always", "Anytime", "My pleasure"]   
+    },
+    {
+        "tag": "hours",
+        "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+        "responses": ["We're open every week day 8am-5pm", "Our hours are 8am-5pm for week days"]
+    },
+    {
+        "tag": "respondus",
+        "patterns": ["What is lockdown-browser?", "Why lockdown browser?", "What is respondus?"],
+        "responses": ["LockDown Browser® is a custom browser that locks down the testing environment within a learning management system.", "LockDown Browser is the “gold standard” for securing online exams in classrooms or proctored environments."]
+    },
+    {
+        "tag": "moodlelogin",
+        "patterns": ["I cannot login to moodle", "my moodle is not working"],
+        "responses": ["Please reset your password and check your school email"]
+    },
+    {
+        "tag": "zoom",
+        "patterns":["I am not able to join a meeting"],
+        "responses":["Use the email address that you registered with the zoom invitation to join the meeting"]
+    
+    },
+    {
+        "tag":"student portal",
+        "patterns":["I cannot login to the student portal","I cannot access my student portal"],
+        "responses":["reset your password"]
+        
+    },
+    {
+        "tag":"email",
+        "patterns":["Email problem", "cant login"],
+        "responses":["credentials registration number" ,"share phone number"]
+    },
+    {
+        "tag":"contact Kabuo",
+        "patterns":["How can I log into moodle", "where do I access the moodle link to the platform,what do I use to log in"],
+        "responses":["call Joshua(0724324503)","call Nichodemus(0708435257)","email studentsupport@kabarak.ac.ke"]
+    },
+    {
+        "tag":"installing lockdown browser",
+        "patterns":["How do I install lock down browser?" ,"How do I get a link to install lockdown browser?"],
+        "responses":["use tthe following link:https://download.respondus.com/lockdown/download.php?id=752"]
+    },
+    {
+        "tag":"launching lockdown browser",
+        "patterns":["How do I launch lockdown browser ?","Do I launch lock down browser in an new browser?"],
+        "responses":["Log into your moodle account using another browser and launch the lockdown browserLaunch in another browser","launch in another browser"]
+    },
+    {
+        "tag":"challenges when connecting to lockdown browser exams",
+        "patterns":["Error sending exam start notification", "unable to continue with exam","Error in lock down exam ,Error in exams"],
+        "responses":["Check your internet connection","get an alternative connection","Buy bundles" ,"Restart your router" ,"Check with your service provider "]
+    },
+    {
+        "tag":"connection server blocked",
+        "patterns":["Update server is not supplying information", "or the connection to update server is blocked","I have a server blocked problem" ,"Server blocked" ,"My lockdown browser is hanging"],
+        "responses":["Check your antivirus software","Disable the setting blocking the Lockdown server","Disable windows defender","Uninstall antivirus "]
+    },
+    {
+        "tag":"video connection timed out",
+        "patterns":["My video is hanging" ,"Connection has timed out" ,"I cannot navigate though lockdown browser page" ,"my lockdown browser page is stuck "],
+        "responses":["Restart your lock down browser" ,"Refresh the lockdown browser page" ,"Check your internet connection ","Change your internet connection" ,"Restart your computer "]
+    }
+
+
+]}

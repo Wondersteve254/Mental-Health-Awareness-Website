@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: blue;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+    input[type=label]{
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+  <section>
+    <nav>
+        <div class="logo">
+            <a href="HOME.HTML"><img src="images/Kabarak_University_logo.png" alt=""></a>
+        </div>
+        <ul class="navlinks">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="service.html">SERVICES</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="Contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+</section>
+        <h3>CONTACT US FORM</h3>
+        <link rel="stylesheet" href="index.css">
+       <div class="container">
+        <form action="login.php" method="post">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="Email" placeholder="Your email.."
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="Kenya">Kenya</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            </select>
+      <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <button type="submit" name="submit" onclick="sendEmail()">Submit</button>
+          <script>
+            function sendEmail() {
+              var xhr = new XMLHttpRequest();
+              xhr.open("POST", "login.php", true);
+              xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+              xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  console.log(xhr.responseText);
+                  alert('Message sent successfully.');
+                } else {
+                  console.log('Error');
+                }
+              };
+              var name = document.getElementsByName("name")[0].value;
+              var email = document.getElementsByName("email")[0].value;
+              var message = document.getElementsByName("message")[0].value;
+              xhr.send("name=" + name + "&email=" + email + "&message=" + message);
+            }
+          </script>
+          
+       </form>
+        </div>
+        <footer>
+          <div class="footer-left">
+            <h3>Mental Health Awareness</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan neque vel felis eleifend, vel interdum sapien porta.</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">National Suicide Prevention Lifeline</a></li>
+              <li><a href="#">Crisis Text Line</a></li>
+              <li><a href="#">National Alliance on Mental Illness</a></li>
+              <li><a href="#">Mental Health America</a></li>
+            </ul>
+          </div>
+        </footer>
+</body>
+</html>

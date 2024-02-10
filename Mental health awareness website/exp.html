@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>chatbot</title>
+        <style type="text/css">
+            body{
+                background-color: skyblue;
+                text-align: center;
+                border-color: white;
+                border-width: 50px;
+                border-style: solid;
+
+            }
+            input{
+                width: 300px;
+                height: 200px;
+                background-color:gold;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="glass">
+            <h1>Ask Your Question??</h1>
+            <h2>Yeah,ask Some Question</h2>
+            <div class="input">
+                <input
+                    type="text"
+                    id="userBox"
+                    onkeydown="if(event.keyCode == 13){ talk()}"
+                    placeholder="Type your Question"
+                />
+    
+            </div>
+            <p id="chatLog">Answer Appering Hear</p>
+        </div>
+        <script>
+        function talk() {
+    var know = {
+        "who are you": "I am a chatbot",
+        "hello":"hello,hi",
+        "hi":"Hi,hey",
+        "I have a problem":"what's your problem?",
+        "my phone laggs behind sometimes":"delete the apps and files taht you do not use to create more space",
+        "my phone's battery drains so fast":"turn off wifi and bluetooth when not in use,reduce the screen's brightness",
+        "thanks for your help":"you are welcomed",
+
+    };
+    var user = document.getElementById("userBox").value;
+    document.getElementById("chatLog").innerHTML = user + "<br>";
+    if (user in know) {
+        document.getElementById("chatLog").innerHTML = know[user] + "<br>";
+    } else {
+        document.getElementById("chatLog").innerHTML =
+            "Sorry,I didn't understand <br>";
+    }
+}
+</script>
+    </body>
+</html>

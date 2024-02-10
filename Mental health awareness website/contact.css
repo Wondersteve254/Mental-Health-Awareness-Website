@@ -1,0 +1,101 @@
+* body{
+    background-color: blue;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding: 35px;
+    background-color: green;
+    box-shadow: 0 5PX 10PX;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li a{
+    text-decoration: none;
+    padding-left: 5px;
+    color: black;
+}
+.navlinks {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navlinks li {
+    margin: 0 30px;
+    position: relative;
+  }
+  
+  .navlinks li a {
+    text-decoration: none;
+    font-size: medium;
+    transition: 0.3 ease;
+  }
+.navlinks li a:hover,
+.navlinks li a.active{
+    color: rgb(255, 255, 255);
+}
+.navlinks li a.active::after,
+.navlinks li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    bottom: -6px;
+    left: 10px;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e1114;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-left h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+  }
+  
+  .social-icons a i {
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .social-icons a i:hover{
+    color: #002bff;
+  }
+  .footer-right h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+  }
